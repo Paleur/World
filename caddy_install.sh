@@ -61,7 +61,7 @@ Download_caddy(){
 	elif [[ ${bit} == "armv7l" ]]; then
 		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/download/linux/arm7${extension_all}"
 	else
-		echo -e "${Error_font_prefix}[错误]${Font_suffix} 不支持 [${bit}] !" && exit 1
+		echo -e "${Error_font_prefix}[错误]${Font_suffix} 不支持 [${bit}] ! " && exit 1
 	fi
 	[[ ! -e "caddy_linux.tar.gz" ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 下载失败 !" && exit 1
 	tar zxf "caddy_linux.tar.gz"
